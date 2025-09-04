@@ -1,0 +1,1772 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Wellness & Science MD - Premium Functional Medicine for High Performers | Harvard-Trained Physician</title>
+    <meta name="description" content="Harvard & Yale-trained, double board-certified physician offering premium functional medicine. Specialized burnout recovery and performance optimization for executives and high achievers.">
+    <meta name="keywords" content="functional medicine, executive health, burnout recovery, performance optimization, Harvard physician, Yale doctor">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Premium Functional Medicine for High Performers">
+    <meta property="og:description" content="Harvard-trained physician specializing in executive health and burnout recovery">
+    <meta property="og:image" content="https://placeholder.com/1200x630">
+    <meta property="og:url" content="https://go.wellnessandsciencemd.com">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Premium Functional Medicine for High Performers">
+    <meta property="twitter:description" content="Harvard-trained physician specializing in executive health and burnout recovery">
+    
+    <!-- 
+    SUBDOMAIN SETUP INSTRUCTIONS:
+    To connect this landing page to go.wellnessandsciencemd.com:
+    
+    1. Upload this HTML file to your web hosting provider (e.g., GoDaddy hosting, Hostinger, SiteGround, etc.)
+    2. In your GoDaddy domain management:
+       - Go to DNS Management
+       - Add a CNAME record:
+         * Name: go
+         * Value: your-hosting-provider.com (or the IP address if using A record)
+         * TTL: 1 Hour
+    3. Wait 24-48 hours for DNS propagation
+    4. Test by visiting go.wellnessandsciencemd.com
+    
+    Alternative: If using services like Netlify or Vercel, you can deploy directly and point the CNAME to their servers.
+    -->
+    
+    <!-- Schema JSON-LD for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": ["LocalBusiness", "Physician"],
+      "name": "Wellness & Science MD",
+      "description": "Premium functional medicine practice specializing in executive health and burnout recovery",
+      "telephone": "+1-413-200-8786",
+      "email": "avakreych@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Orlando",
+        "addressRegion": "FL",
+        "addressCountry": "US"
+      },
+      "medicalSpecialty": ["Internal Medicine", "Preventive Medicine", "Functional Medicine"],
+      "priceRange": "$497-$2997"
+    }
+    </script>
+    
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Do you accept insurance?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We operate as a concierge practice focusing on comprehensive care that insurance typically doesn't cover. We provide detailed receipts for HSA/FSA reimbursement."
+          }
+        },
+        {
+          "@type": "Question", 
+          "name": "How quickly will I see results?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most clients report improved energy within 2-4 weeks. Full optimization typically takes 3-6 months depending on individual factors."
+          }
+        }
+      ]
+    }
+    </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Sticky Mobile Call Bar */
+        .mobile-call-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(45deg, #e74c3c, #c0392b);
+            padding: 12px 20px;
+            z-index: 1000;
+            display: none;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 -2px 20px rgba(0,0,0,0.2);
+        }
+        
+        .mobile-call-bar .call-text {
+            color: white;
+            font-weight: 600;
+            font-size: 0.9em;
+        }
+        
+        .mobile-call-bar .call-button {
+            background: rgba(255,255,255,0.2);
+            color: white;
+            padding: 8px 16px;
+            border: 1px solid rgba(255,255,255,0.3);
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9em;
+        }
+        
+        @media (max-width: 768px) {
+            .mobile-call-bar {
+                display: flex;
+            }
+            body {
+                padding-bottom: 60px;
+            }
+        }
+        
+        /* Top Header with Phone - UPDATED: Made phone clickable */
+        .top-header {
+            background: #1a1a1a;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            font-size: 0.9em;
+        }
+        
+        .phone-number {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .phone-number:hover {
+            color: #2980b9;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #0f1419 0%, #1a2332 50%, #2c3e50 100%);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at center, rgba(52, 152, 219, 0.1) 0%, transparent 70%);
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+        }
+        
+        .credentials-bar {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 20px;
+            opacity: 0.9;
+            flex-wrap: wrap;
+        }
+        
+        .credential-badge {
+            background: rgba(255,255,255,0.1);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: 500;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+        
+        .hero-highlight {
+            color: #3498db;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.3em;
+            margin-bottom: 30px;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+        
+        .cta-button {
+            background: linear-gradient(45deg, #e74c3c, #c0392b);
+            color: white;
+            padding: 18px 40px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0 8px 25px rgba(231, 76, 60, 0.3);
+            margin-right: 15px;
+            margin-bottom: 15px;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(231, 76, 60, 0.4);
+        }
+        
+        .cta-phone {
+            background: transparent;
+            color: white;
+            padding: 18px 40px;
+            border: 2px solid #3498db;
+            border-radius: 50px;
+            font-size: 1.1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .cta-phone:hover {
+            background: #3498db;
+            transform: translateY(-3px);
+        }
+        
+        .phone-note {
+            font-size: 0.9em;
+            opacity: 0.8;
+            margin-top: 15px;
+        }
+        
+        .hero-stats {
+            display: flex;
+            gap: 40px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .stat {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 2.5em;
+            font-weight: 700;
+            color: #3498db;
+            display: block;
+        }
+        
+        .stat-label {
+            font-size: 0.9em;
+            opacity: 0.8;
+        }
+        
+        /* Section Styling */
+        .section-light {
+            background: #f8fafc;
+        }
+        
+        .section-dark {
+            background: #1a1a1a;
+            color: white;
+        }
+        
+        .section-gradient {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        .section-divider {
+            height: 2px;
+            background: linear-gradient(90deg, transparent 0%, #3498db 50%, transparent 100%);
+            margin: 0 auto;
+            max-width: 200px;
+        }
+        
+        /* NEW: Enhanced Credentials/Trust Section */
+        .credentials-trust {
+            padding: 80px 0;
+            background: white;
+        }
+        
+        .credentials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+        
+        .credential-item {
+            text-align: center;
+            padding: 30px 20px;
+            background: #f8fafc;
+            border-radius: 15px;
+            border: 2px solid #e1e8ed;
+            transition: all 0.3s ease;
+        }
+        
+        .credential-item:hover {
+            border-color: #3498db;
+            transform: translateY(-5px);
+        }
+        
+        .credential-logo {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(45deg, #8b0000, #dc143c);
+            border-radius: 15px;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 1.5em;
+        }
+        
+        .credential-item h3 {
+            font-size: 1.4em;
+            margin-bottom: 10px;
+            color: #1a1a1a;
+        }
+        
+        .credential-item p {
+            color: #666;
+            font-size: 0.9em;
+        }
+        
+        .affiliations {
+            padding: 60px 0;
+            background: #f8fafc;
+            border-top: 1px solid #e1e8ed;
+        }
+        
+        .affiliation-logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            opacity: 0.6;
+        }
+        
+        .affiliation-logo {
+            width: 120px;
+            height: 60px;
+            background: #ddd;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8em;
+            color: #666;
+        }
+        
+        /* Doctor's Note Section */
+        .doctors-note {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+        }
+        
+        .note-content {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+        
+        .doctor-photo {
+            width: 200px;
+            height: 240px;
+            background: #ddd;
+            border-radius: 15px;
+            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" fill="%23999" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>');
+            background-size: 60px;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+        
+        .note-letter {
+            background: rgba(255,255,255,0.1);
+            padding: 40px;
+            border-radius: 15px;
+            border-left: 5px solid #3498db;
+        }
+        
+        .note-signature {
+            margin-top: 30px;
+            font-style: italic;
+            opacity: 0.9;
+        }
+        
+        @media (max-width: 768px) {
+            .note-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .doctor-photo {
+                margin: 0 auto;
+            }
+        }
+        
+        /* Pain Points Section */
+        .pain-points {
+            padding: 100px 0;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-title {
+            font-size: 2.5em;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #1a1a1a;
+        }
+        
+        .section-dark .section-title {
+            color: white;
+        }
+        
+        .section-subtitle {
+            font-size: 1.2em;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .section-dark .section-subtitle {
+            color: rgba(255,255,255,0.8);
+        }
+        
+        .pain-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .pain-card {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-left: 5px solid #e74c3c;
+            transition: all 0.3s ease;
+        }
+        
+        .pain-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        .pain-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(45deg, #e74c3c, #c0392b);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+        
+        .pain-title {
+            font-size: 1.3em;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #1a1a1a;
+        }
+        
+        .pain-description {
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        /* NEW: Enhanced Inline CTAs */
+        .inline-cta {
+            text-align: center;
+            padding: 60px 0;
+            background: rgba(52, 152, 219, 0.05);
+            margin: 80px 0;
+            border-radius: 20px;
+            border: 2px solid rgba(52, 152, 219, 0.1);
+        }
+        
+        .inline-cta h3 {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            color: #1a1a1a;
+        }
+        
+        .inline-cta p {
+            font-size: 1.1em;
+            color: #666;
+            margin-bottom: 30px;
+        }
+        
+        .inline-cta .risk-note {
+            font-size: 0.9em;
+            color: #888;
+            margin-top: 15px;
+            font-style: italic;
+        }
+        
+        /* Pricing Section */
+        .pricing {
+            padding: 100px 0;
+        }
+        
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+        
+        .pricing-card {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+        }
+        
+        .pricing-card.featured {
+            border: 3px solid #e74c3c;
+            transform: scale(1.05);
+        }
+        
+        .pricing-card.featured::before {
+            content: 'Most Popular';
+            position: absolute;
+            top: 20px;
+            right: -30px;
+            background: #e74c3c;
+            color: white;
+            padding: 5px 40px;
+            font-size: 0.8em;
+            font-weight: 600;
+            transform: rotate(45deg);
+        }
+        
+        .pricing-header {
+            padding: 40px 30px 20px;
+            text-align: center;
+            background: linear-gradient(135deg, #f8fafc 0%, #e1e8ed 100%);
+        }
+        
+        .pricing-card.featured .pricing-header {
+            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+            color: white;
+        }
+        
+        .pricing-title {
+            font-size: 1.6em;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        .pricing-subtitle {
+            opacity: 0.8;
+            margin-bottom: 20px;
+        }
+        
+        .pricing-price {
+            font-size: 3em;
+            font-weight: 700;
+            color: #e74c3c;
+        }
+        
+        .pricing-card.featured .pricing-price {
+            color: white;
+        }
+        
+        .pricing-period {
+            font-size: 0.9em;
+            opacity: 0.7;
+        }
+        
+        .pricing-body {
+            padding: 40px 30px;
+        }
+        
+        .pricing-features {
+            list-style: none;
+            margin-bottom: 40px;
+        }
+        
+        .pricing-features li {
+            padding: 12px 0;
+            position: relative;
+            padding-left: 30px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .pricing-features li:last-child {
+            border-bottom: none;
+        }
+        
+        .pricing-features li::before {
+            content: '✓';
+            color: #27ae60;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        .pricing-cta {
+            width: 100%;
+            text-align: center;
+            padding: 15px;
+            background: #f8fafc;
+            border: 2px solid #e1e8ed;
+            color: #1a1a1a;
+        }
+        
+        .pricing-card.featured .pricing-cta {
+            background: #e74c3c;
+            border-color: #e74c3c;
+            color: white;
+        }
+        
+        /* UPDATED: Enhanced Form Section with Formspree Integration */
+        .form-section {
+            padding: 100px 0;
+            background: #f8fafc;
+        }
+        
+        .form-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .process-steps-mini {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-bottom: 60px;
+            flex-wrap: wrap;
+        }
+        
+        .mini-step {
+            text-align: center;
+            max-width: 200px;
+        }
+        
+        .mini-step-number {
+            width: 50px;
+            height: 50px;
+            background: #e74c3c;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            margin: 0 auto 15px;
+        }
+        
+        .mini-step-text {
+            font-size: 0.9em;
+            color: #666;
+        }
+        
+        .consultation-form {
+            background: white;
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .form-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .form-header h3 {
+            font-size: 2em;
+            margin-bottom: 15px;
+            color: #1a1a1a;
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #1a1a1a;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #e1e8ed;
+            border-radius: 10px;
+            font-size: 1em;
+            transition: border-color 0.3s ease;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #3498db;
+        }
+        
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        .form-submit {
+            width: 100%;
+            background: linear-gradient(45deg, #e74c3c, #c0392b);
+            color: white;
+            padding: 18px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .form-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(231, 76, 60, 0.3);
+        }
+        
+        .form-submit:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        /* NEW: Enhanced Risk Reassurance */
+        .form-reassurance {
+            text-align: center;
+            margin-top: 30px;
+            padding: 25px;
+            background: linear-gradient(135deg, #e8f5e8 0%, #f0f8f0 100%);
+            border-radius: 15px;
+            border: 2px solid #27ae60;
+        }
+        
+        .form-reassurance .reassurance-title {
+            font-weight: 700;
+            color: #27ae60;
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+        
+        .form-reassurance .reassurance-text {
+            font-size: 0.9em;
+            color: #666;
+            margin-bottom: 15px;
+        }
+        
+        .form-reassurance .phone-cta {
+            color: #e74c3c;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .form-reassurance .phone-cta:hover {
+            color: #c0392b;
+        }
+        
+        /* Form Success/Error Messages */
+        .form-message {
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            font-weight: 600;
+            display: none;
+        }
+        
+        .form-message.success {
+            background: #d4edda;
+            border: 2px solid #27ae60;
+            color: #155724;
+        }
+        
+        .form-message.error {
+            background: #f8d7da;
+            border: 2px solid #e74c3c;
+            color: #721c24;
+        }
+        
+        @media (max-width: 768px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            .consultation-form {
+                padding: 30px 20px;
+            }
+        }
+        
+        /* NEW: Enhanced FAQ Section with Accordion */
+        .faq {
+            padding: 100px 0;
+            background: white;
+        }
+        
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            margin-bottom: 20px;
+            border: 2px solid #f0f0f0;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .faq-item:hover {
+            border-color: #3498db;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .faq-question {
+            width: 100%;
+            background: #f8fafc;
+            border: none;
+            padding: 25px 30px;
+            text-align: left;
+            font-size: 1.1em;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+        
+        .faq-question:hover {
+            background: #e1e8ed;
+        }
+        
+        .faq-question.active {
+            background: #3498db;
+            color: white;
+        }
+        
+        .faq-answer {
+            padding: 0 30px;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            background: white;
+        }
+        
+        .faq-answer.active {
+            padding: 25px 30px;
+            max-height: 400px;
+        }
+        
+        .faq-toggle {
+            font-size: 1.5em;
+            transition: transform 0.3s ease;
+            font-weight: normal;
+        }
+        
+        .faq-question.active .faq-toggle {
+            transform: rotate(45deg);
+        }
+        
+        /* Results Disclaimer */
+        .disclaimer {
+            padding: 40px 0;
+            background: #1a1a1a;
+            color: white;
+            text-align: center;
+        }
+        
+        .disclaimer-text {
+            font-size: 0.9em;
+            opacity: 0.8;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-stats {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .credentials-bar {
+                flex-wrap: wrap;
+            }
+            
+            .pain-grid, .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .process-steps-mini {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .credentials-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* Animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .pain-card, .pricing-card, .credential-item, .faq-item {
+            animation: fadeInUp 0.6s ease forwards;
+        }
+        
+        /* Focus states for accessibility */
+        .cta-button:focus,
+        .cta-phone:focus,
+        .form-submit:focus,
+        .phone-number:focus {
+            outline: 3px solid #3498db;
+            outline-offset: 2px;
+        }
+        
+        /* Reduced motion support */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Header with Phone - UPDATED: Made all phone numbers clickable -->
+    <div class="top-header">
+        <div class="container">
+            🩺 Premium Functional Medicine Practice | Call for Immediate Consultation: 
+            <a href="tel:+14132008786" class="phone-number" data-cta="phone-header">(413) 200-8786</a>
+        </div>
+    </div>
+
+    <!-- Mobile Sticky Call Bar - UPDATED: Clickable phone -->
+    <div class="mobile-call-bar">
+        <div class="call-text">Get Your Health Back on Track</div>
+        <a href="tel:+14132008786" class="call-button" data-cta="mobile-call">Call Now</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="credentials-bar">
+                    <span class="credential-badge">Harvard Medical School</span>
+                    <span class="credential-badge">Yale University</span>
+                    <span class="credential-badge">Double Board-Certified</span>
+                    <span class="credential-badge">10+ Years Experience</span>
+                </div>
+                
+                <h1>Stop Running on Empty. <span class="hero-highlight">Reclaim Your Peak Performance</span> Without the Burnout.</h1>
+                
+                <p class="hero-subtitle">
+                    Finally get to the root cause of your exhaustion and brain fog — guided by a Harvard- and Yale-trained, double board-certified physician who understands the unique demands of high performers.
+                </p>
+                
+                <div>
+                    <a href="#consultation-form" class="cta-button" id="cta-hero" data-cta="consult">Book Your Breakthrough Consultation</a>
+                    <a href="tel:+14132008786" class="cta-phone" data-cta="phone-hero">(413) 200-8786</a>
+                </div>
+                
+                <p class="phone-note">Prefer to talk? Our team is standing by to answer questions and schedule your consultation.</p>
+                
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">Executives Optimized</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">95%</span>
+                        <span class="stat-label">See Results in 30 Days</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">4.9★</span>
+                        <span class="stat-label">Patient Satisfaction</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW: Enhanced Credentials You Can Trust Section -->
+    <section class="credentials-trust">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Credentials You Can Trust</h2>
+                <p class="section-subtitle">When your health is on the line, experience and education matter</p>
+            </div>
+            
+            <div class="credentials-grid">
+                <div class="credential-item">
+                    <div class="credential-logo">HMS</div>
+                    <!-- Replace with real Harvard Medical School logo -->
+                    <h3>Harvard Medical School</h3>
+                    <p>Doctor of Medicine (MD)<br>Summa Cum Laude</p>
+                </div>
+                
+                <div class="credential-item">
+                    <div class="credential-logo">YALE</div>
+                    <!-- Replace with real Yale University logo -->
+                    <h3>Yale University</h3>
+                    <p>Bachelor of Science<br>Molecular Biology</p>
+                </div>
+                
+                <div class="credential-item">
+                    <div class="credential-logo">BC</div>
+                    <!-- Replace with board certification logos -->
+                    <h3>Board Certified</h3>
+                    <p>Internal Medicine<br>Preventive Medicine</p>
+                </div>
+                
+                <div class="credential-item">
+                    <div class="credential-logo">10+</div>
+                    <!-- Replace with experience badge -->
+                    <h3>Clinical Experience</h3>
+                    <p>Specialized in Executive Health<br>& Performance Medicine</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Affiliations -->
+    <section class="affiliations">
+        <div class="container">
+            <p style="text-align: center; margin-bottom: 30px; color: #666; font-size: 0.9em;">AS SEEN IN / PROFESSIONAL AFFILIATIONS</p>
+            <div class="affiliation-logos">
+                <!-- Replace with real affiliation logos -->
+                <div class="affiliation-logo">A4M</div>
+                <div class="affiliation-logo">IFM</div>
+                <div class="affiliation-logo">AMA</div>
+                <div class="affiliation-logo">ACP</div>
+                <div class="affiliation-logo">AAFP</div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- Doctor's Note Section -->
+    <section class="doctors-note">
+        <div class="container">
+            <div class="note-content">
+                <div class="doctor-photo">
+                    <!-- Replace with actual doctor photo -->
+                </div>
+                
+                <div class="note-letter">
+                    <h3 style="margin-bottom: 20px; color: #3498db;">A Personal Note From Dr. [Name]</h3>
+                    <p style="margin-bottom: 20px;">I understand the unique pressures you face as a high performer. After graduating from Harvard Medical School and completing my training at Yale, I spent years in traditional medicine watching brilliant executives, entrepreneurs, and leaders suffer needlessly.</p>
+                    
+                    <p style="margin-bottom: 20px;">The standard "work less, stress less" advice isn't realistic for people who've built their lives around excellence. That's why I developed a different approach — one that optimizes your biology to support your ambitions, not limit them.</p>
+                    
+                    <p>I've helped over 500 high performers reclaim their energy, sharpen their focus, and achieve sustainable peak performance. Now I want to help you do the same.</p>
+                    
+                    <div class="note-signature">
+                        <strong>— Dr. [Name], MD</strong><br>
+                        <em>Harvard Medical School, Yale University</em>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- Pain Points Section -->
+    <section class="pain-points section-light">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">You're Not Broken. Your System Just Wasn't Built for These Demands.</h2>
+                <p class="section-subtitle">High performers face unique physiological challenges that standard healthcare completely misses</p>
+            </div>
+            
+            <div class="pain-grid">
+                <div class="pain-card">
+                    <div class="pain-icon">🔋</div>
+                    <h3 class="pain-title">Chronic Exhaustion Despite "Adequate" Sleep</h3>
+                    <p class="pain-description">You're getting 6-7 hours but wake up feeling like you never slept. Your energy crashes at 2 PM, and you're relying on caffeine just to function.</p>
+                </div>
+                
+                <div class="pain-card">
+                    <div class="pain-icon">🧠</div>
+                    <h3 class="pain-title">Brain Fog That's Killing Your Edge</h3>
+                    <p class="pain-description">The sharp thinking that got you here is dulled. You forget important details, struggle with complex decisions, and feel like you're operating at 60% capacity.</p>
+                </div>
+                
+                <div class="pain-card">
+                    <div class="pain-icon">⚖️</div>
+                    <h3 class="pain-title">Weight Gain Despite Extreme Discipline</h3>
+                    <p class="pain-description">You maintain discipline in everything else, but your body isn't responding to diet and exercise like it used to. Stubborn weight around your midsection won't budge.</p>
+                </div>
+                
+                <div class="pain-card">
+                    <div class="pain-icon">🎭</div>
+                    <h3 class="pain-title">Mood Swings and Irritability</h3>
+                    <p class="pain-description">You snap at your team, feel overwhelmed by decisions that used to be easy, and notice your patience is completely shot by evening.</p>
+                </div>
+                
+                <div class="pain-card">
+                    <div class="pain-icon">🏥</div>
+                    <h3 class="pain-title">"Everything Looks Normal" from Traditional Doctors</h3>
+                    <p class="pain-description">Your basic labs come back fine, but you know something is wrong. You're told it's just stress and to "work less" — advice that's completely unrealistic.</p>
+                </div>
+                
+                <div class="pain-card">
+                    <div class="pain-icon">🔄</div>
+                    <h3 class="pain-title">Tried Everything, Nothing Sticks</h3>
+                    <p class="pain-description">Meditation apps, expensive supplements, trendy diets — you've tried them all. Some help temporarily, but nothing addresses the root cause of your burnout.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW: Inline CTA 1 with Risk Reassurance -->
+    <div class="container">
+        <div class="inline-cta">
+            <h3>Sound Familiar? You're Not Alone.</h3>
+            <p>Thousands of high performers are struggling with the same issues. The difference is knowing where to get real answers.</p>
+            <a href="#consultation-form" class="cta-button" id="cta-inline-1" data-cta="consult">Book Your Consultation Now</a>
+            <p class="risk-note">✓ Confidential • ✓ No Obligation • ✓ Physician-Reviewed</p>
+        </div>
+    </div>
+
+    <!-- Differentiator Section -->
+    <section class="section-gradient" style="padding: 100px 0;">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Why High Performers Choose Us Over $600/Hour Functional Medicine Clinics</h2>
+                <p class="section-subtitle">We understand that your time is precious and your performance demands are non-negotiable</p>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-top: 60px;">
+                <div style="text-align: center;">
+                    <div style="width: 80px; height: 80px; background: rgba(255,255,255,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 2em;">🔬</div>
+                    <h3 style="font-size: 1.4em; font-weight: 600; margin-bottom: 15px;">Advanced Testing That Actually Matters</h3>
+                    <p style="opacity: 0.9; line-height: 1.6;">We use comprehensive labs that reveal what basic bloodwork misses — adrenal function, nutrient deficiencies, inflammatory markers, and metabolic efficiency.</p>
+                </div>
+                
+                <div style="text-align: center;">
+                    <div style="width: 80px; height: 80px; background: rgba(255,255,255,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 2em;">🎯</div>
+                    <h3 style="font-size: 1.4em; font-weight: 600; margin-bottom: 15px;">Protocols Built for Your Schedule</h3>
+                    <p style="opacity: 0.9; line-height: 1.6;">No 2-hour morning routines or impossible lifestyle changes. Every recommendation is designed to integrate seamlessly with demanding professional schedules.</p>
+                </div>
+                
+                <div style="text-align: center;">
+                    <div style="width: 80px; height: 80px; background: rgba(255,255,255,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 2em;">📈</div>
+                    <h3 style="font-size: 1.4em; font-weight: 600; margin-bottom: 15px;">Performance-First Approach</h3>
+                    <p style="opacity: 0.9; line-height: 1.6;">We don't just want you to feel better — we want you to perform better. Every intervention is measured against your professional effectiveness and energy levels.</p>
+                </div>
+                
+                <div style="text-align: center;">
+                    <div style="width: 80px; height: 80px; background: rgba(255,255,255,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 2em;">🔄</div>
+                    <h3 style="font-size: 1.4em; font-weight: 600; margin-bottom: 15px;">Continuous Optimization</h3>
+                    <p style="opacity: 0.9; line-height: 1.6;">We personally track your progress and adjust protocols until results appear. No cookie-cutter plans or "try this for 3 months and see what happens."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW: Inline CTA 2 with Phone Option -->
+    <div class="container">
+        <div class="inline-cta">
+            <h3>Ready to Experience the Difference?</h3>
+            <p>Join the hundreds of executives who've transformed their health and performance with our physician-led approach.</p>
+            <a href="tel:+14132008786" class="cta-button" id="cta-inline-2" data-cta="phone">Call (413) 200-8786 for Immediate Consultation</a>
+            <p class="risk-note">✓ Confidential • ✓ No Obligation • ✓ Physician-Reviewed</p>
+        </div>
+    </div>
+
+    <!-- Pricing Section -->
+    <section class="pricing section-light">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Premium Medical Care. Transparent Pricing.</h2>
+                <p class="section-subtitle">Choose the level of support that fits your needs and goals</p>
+            </div>
+            
+            <div class="pricing-grid">
+                <!-- Initial Consultation -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">Initial Assessment</h3>
+                        <p class="pricing-subtitle">Perfect for getting started</p>
+                        <div class="pricing-price">$497</div>
+                        <div class="pricing-period">One-time consultation</div>
+                    </div>
+                    <div class="pricing-body">
+                        <ul class="pricing-features">
+                            <li>90-minute comprehensive health assessment</li>
+                            <li>Advanced lab test recommendations</li>
+                            <li>Personalized protocol development</li>
+                            <li>Direct physician consultation</li>
+                            <li>Written health optimization plan</li>
+                            <li>30-day email follow-up support</li>
+                        </ul>
+                        <a href="#consultation-form" class="cta-button pricing-cta" data-cta="pricing-initial">Book Initial Assessment</a>
+                    </div>
+                </div>
+
+                <!-- Membership Program -->
+                <div class="pricing-card featured">
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">Performance Membership</h3>
+                        <p class="pricing-subtitle">Ongoing optimization & support</p>
+                        <div class="pricing-price">$997</div>
+                        <div class="pricing-period">per month</div>
+                    </div>
+                    <div class="pricing-body">
+                        <ul class="pricing-features">
+                            <li>Everything in Initial Assessment</li>
+                            <li>Monthly 60-minute check-ins</li>
+                            <li>Unlimited messaging access to physician</li>
+                            <li>Quarterly advanced lab panels</li>
+                            <li>Protocol adjustments & optimization</li>
+                            <li>Priority scheduling & same-day responses</li>
+                            <li>Supplement & lifestyle coaching</li>
+                            <li>Performance tracking & metrics</li>
+                        </ul>
+                        <a href="#consultation-form" class="cta-button pricing-cta" data-cta="pricing-membership">Start Membership</a>
+                    </div>
+                </div>
+
+                <!-- Custom Comprehensive -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">Comprehensive Package</h3>
+                        <p class="pricing-subtitle">Complete health overhaul</p>
+                        <div class="pricing-price">$2,997</div>
+                        <div class="pricing-period">3-month intensive</div>
+                    </div>
+                    <div class="pricing-body">
+                        <ul class="pricing-features">
+                            <li>Complete functional medicine workup</li>
+                            <li>Advanced diagnostic testing suite</li>
+                            <li>Comprehensive nutrient analysis</li>
+                            <li>Hormone optimization protocols</li>
+                            <li>Detoxification & metabolic reset</li>
+                            <li>Weekly physician consultations</li>
+                            <li>Custom supplement protocols</li>
+                            <li>Lifestyle & performance coaching</li>
+                            <li>3-month transformation guarantee</li>
+                        </ul>
+                        <a href="#consultation-form" class="cta-button pricing-cta" data-cta="pricing-comprehensive">Get Comprehensive Package</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 40px; padding: 30px; background: rgba(39, 174, 96, 0.1); border-radius: 15px;">
+                <h4 style="color: #27ae60; margin-bottom: 15px;">🛡️ 100% Results Guarantee</h4>
+                <p style="color: #666;">If you don't see measurable improvement in energy, focus, and overall performance within 60 days, we'll refund 100% of your investment. No questions asked.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW: Inline CTA 3 after Pricing -->
+    <div class="container">
+        <div class="inline-cta">
+            <h3>Still Have Questions About Which Option Is Right for You?</h3>
+            <p>Schedule a complimentary 15-minute consultation call to discuss your specific needs and goals.</p>
+            <a href="tel:+14132008786" class="cta-button" id="cta-inline-3" data-cta="phone">Call (413) 200-8786 Now</a>
+            <p class="risk-note">✓ Confidential • ✓ No Obligation • ✓ Physician-Reviewed</p>
+        </div>
+    </div>
+
+    <!-- UPDATED: Consultation Form Section with Formspree Integration -->
+    <section class="form-section" id="consultation-form">
+        <div class="container">
+            <div class="form-container">
+                <div class="section-header">
+                    <h2 class="section-title">Book Your Breakthrough Consultation</h2>
+                    <p class="section-subtitle">Take the first step toward reclaiming your peak performance</p>
+                </div>
+                
+                <!-- How It Works Mini Process -->
+                <div class="process-steps-mini">
+                    <div class="mini-step">
+                        <div class="mini-step-number">1</div>
+                        <div class="mini-step-text">Submit your information</div>
+                    </div>
+                    <div class="mini-step">
+                        <div class="mini-step-number">2</div>
+                        <div class="mini-step-text">Our team contacts you within 4 hours</div>
+                    </div>
+                    <div class="mini-step">
+                        <div class="mini-step-number">3</div>
+                        <div class="mini-step-text">Schedule your consultation</div>
+                    </div>
+                </div>
+                
+                <div class="consultation-form">
+                    <div class="form-header">
+                        <h3>Get Started Today</h3>
+                        <p>Complete this form and our medical team will contact you to schedule your personalized consultation.</p>
+                    </div>
+                    
+                    <!-- 
+                    FORMSPREE INTEGRATION SETUP:
+                    1. Go to formspree.io and create a free account
+                    2. Create a new form and get your form ID
+                    3. Replace "YOUR_FORM_ID" below with your actual Formspree form ID
+                    4. In Formspree settings, configure auto-reply with message:
+                       "Thank you for reaching out to Wellness & Science MD. A member of our physician team will contact you shortly with next steps."
+                    5. Set up email notifications to go to avakreych@gmail.com
+                    
+                    Alternative: Use Netlify Forms by adding netlify attribute to form tag
+                    -->
+                    <form id="consultation-form-element" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                        <!-- Hidden field for Formspree to enable replies -->
+                        <input type="hidden" name="_replyto" value="avakreych@gmail.com">
+                        <input type="hidden" name="_subject" value="New Consultation Request - Wellness & Science MD">
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name *</label>
+                                <input type="text" id="firstName" name="firstName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name *</label>
+                                <input type="text" id="lastName" name="lastName" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="inquiry-type">I'm interested in:</label>
+                            <select id="inquiry-type" name="inquiryType">
+                                <option value="">Select an option</option>
+                                <option value="consultation">Initial Consultation ($497)</option>
+                                <option value="membership">Performance Membership ($997/month)</option>
+                                <option value="comprehensive">Comprehensive Package ($2,997)</option>
+                                <option value="information">Just want more information</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="biggest-challenge">What's your biggest health/energy challenge right now?</label>
+                            <textarea id="biggest-challenge" name="biggestChallenge" placeholder="e.g., chronic fatigue, brain fog, difficulty sleeping, weight gain..."></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="timeline">When would you like to start?</label>
+                            <select id="timeline" name="timeline">
+                                <option value="">Select timeline</option>
+                                <option value="asap">As soon as possible</option>
+                                <option value="week">Within the next week</option>
+                                <option value="month">Within the next month</option>
+                                <option value="exploring">Just exploring options</option>
+                            </select>
+                        </div>
+                        
+                        <button type="submit" class="form-submit" data-cta="form-submit">
+                            Get My Consultation Scheduled
+                        </button>
+                        
+                        <!-- Form Success/Error Messages -->
+                        <div id="form-success" class="form-message success">
+                            <strong>Thank you!</strong> Your consultation request has been submitted. Our team will contact you within 4 hours to schedule your appointment.
+                        </div>
+                        <div id="form-error" class="form-message error">
+                            <strong>Oops!</strong> There was an error submitting your form. Please try again or call us directly at (413) 200-8786.
+                        </div>
+                    </form>
+                    
+                    <!-- ENHANCED: Risk Reassurance with Phone CTA -->
+                    <div class="form-reassurance">
+                        <div class="reassurance-title">✓ Confidential • ✓ No Obligation • ✓ Physician-Reviewed</div>
+                        <div class="reassurance-text">
+                            All information is completely confidential and will be reviewed by our licensed physician. This is a no-obligation consultation - we're here to help you understand your options and create a path forward.
+                        </div>
+                        <div>
+                            <strong>Prefer to call directly?</strong> Reach us at 
+                            <a href="tel:+14132008786" class="phone-cta">(413) 200-8786</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW: Enhanced FAQ Section with Accordion -->
+    <section class="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-subtitle">Everything you need to know about working with us</p>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question" type="button">
+                        Do you accept insurance?
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We operate as a concierge functional medicine practice, which means we focus on comprehensive care that traditional insurance typically doesn't cover. However, we provide detailed receipts that you can submit to your insurance company or use for HSA/FSA reimbursement. Many of our clients find the investment pays for itself through improved productivity and reduced sick days.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" type="button">
+                        How quickly will I see results?
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Most clients report noticeable improvements in energy and focus within 2-4 weeks of starting their personalized protocol. However, full optimization typically takes 3-6 months as we work to address root causes rather than just symptoms. We track your progress closely and adjust protocols to ensure you're seeing consistent improvement.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" type="button">
+                        Can you work with me remotely?
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Absolutely. We serve high performers nationwide through secure telemedicine consultations. We can coordinate lab work at facilities convenient to you, and all follow-up appointments can be conducted virtually. This approach has proven highly effective for our busy executive clientele.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" type="button">
+                        How is this different from concierge medicine?
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Traditional concierge medicine typically focuses on convenient access to standard medical care. We specialize specifically in functional medicine and performance optimization. Our approach involves advanced testing, root-cause analysis, and protocols designed to optimize rather than just maintain your health.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" type="button">
+                        What kind of testing do you recommend?
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We use comprehensive lab panels that go far beyond basic bloodwork. This typically includes detailed nutrient analysis, hormone panels, inflammatory markers, heavy metal testing, gut health assessment, and adrenal function tests. We only recommend testing that will directly inform your treatment plan.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" type="button">
+                        What if I don't see the results promised?
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We offer a 60-day results guarantee. If you don't experience measurable improvements in energy, focus, and overall performance after following our protocol, we'll provide a full refund. We're confident in our approach because we've seen it work for hundreds of high performers.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="section-dark" style="padding: 100px 0; text-align: center;">
+        <div class="container">
+            <h2 style="font-size: 2.5em; margin-bottom: 20px;">You've Tried Quick Fixes. Now It's Time for Real Solutions.</h2>
+            <p style="font-size: 1.3em; margin-bottom: 40px; opacity: 0.9;">Stop accepting burnout as the price of success. Let's uncover what's actually holding your health back — together.</p>
+            
+            <div style="margin-bottom: 30px;">
+                <a href="#consultation-form" class="cta-button" style="background: linear-gradient(45deg, #27ae60, #2ecc71); padding: 25px 50px; font-size: 1.3em; margin-right: 20px;" id="cta-final" data-cta="consult">Book Your Breakthrough Consultation</a>
+                <a href="tel:+14132008786" class="cta-phone" style="padding: 25px 50px; font-size: 1.3em;" data-cta="phone-final">(413) 200-8786</a>
+            </div>
+            
+            <p style="opacity: 0.8; font-size: 0.9em;">🛡️ 60-day results guarantee — if you don't see measurable improvement in energy and focus, get 100% of your money back.</p>
+        </div>
+    </section>
+
+    <!-- Results Disclaimer -->
+    <section class="disclaimer">
+        <div class="container">
+            <div class="disclaimer-text">
+                <strong>Medical Disclaimer:</strong> Individual results may vary. This information is not intended to diagnose, treat, cure, or prevent any disease. All health decisions should be made in consultation with a qualified healthcare provider. Physician evaluation required for all treatment protocols. Results depend on individual health status, compliance with recommendations, and other factors.
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // UPDATED: Enhanced CTA Click Tracking
+        document.addEventListener('click', function(e) {
+            if (e.target.dataset.cta) {
+                console.log('CTA click', e.target.dataset.cta);
+                // Hook for Google Analytics/Facebook Pixel tracking
+                // Example: gtag('event', 'click', { 'event_category': 'CTA', 'event_label': e.target.dataset.cta });
+                // Example: fbq('track', 'Lead', { content_name: e.target.dataset.cta });
+            }
+        });
+
+        // Mobile Call Bar Display (Enhanced)
+        let callBarShown = false;
+        window.addEventListener('scroll', function() {
+            const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+            const callBar = document.querySelector('.mobile-call-bar');
+            
+            if (scrollPercent > 25 && !callBarShown && window.innerWidth <= 768) {
+                callBar.style.display = 'flex';
+                callBarShown = true;
+            }
+        });
+
+        // UPDATED: Enhanced FAQ Toggle Functionality
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', function() {
+                const answer = this.nextElementSibling;
+                const isActive = this.classList.contains('active');
+                
+                // Close all FAQ items
+                document.querySelectorAll('.faq-question').forEach(q => q.classList.remove('active'));
+                document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('active'));
+                
+                // Open clicked item if it wasn't active
+                if (!isActive) {
+                    this.classList.add('active');
+                    answer.classList.add('active');
+                }
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // FIXED: Proper Form submission handling
+        document.getElementById('consultation-form-element').addEventListener('submit', function(e) {
+            const submitButton = this.querySelector('.form-submit');
+            const successMessage = document.getElementById('form-success');
+            const errorMessage = document.getElementById('form-error');
+            
+            // Don't prevent default - let form submit naturally to Formspree
+            
+            // Disable submit button and show loading
+            submitButton.disabled = true;
+            submitButton.textContent = 'Submitting...';
+            
+            // Hide previous messages
+            successMessage.style.display = 'none';
+            errorMessage.style.display = 'none';
+            
+            // Track form submission for analytics
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'form_submit', {
+                    'event_category': 'Form',
+                    'event_label': 'Consultation Request'
+                });
+            }
+            
+            // Track with Facebook Pixel if available
+            if (typeof fbq !== 'undefined') {
+                fbq('track', 'Lead');
+            }
+            
+            // Re-enable button after a delay in case of issues
+            setTimeout(function() {
+                submitButton.disabled = false;
+                submitButton.textContent = 'Get My Consultation Scheduled';
+            }, 5000);
+        });
+
+        // Form validation enhancement
+        document.querySelectorAll('input[required], select[required]').forEach(field => {
+            field.addEventListener('blur', function() {
+                if (!this.value.trim()) {
+                    this.style.borderColor = '#e74c3c';
+                } else {
+                    this.style.borderColor = '#27ae60';
+                }
+            });
+        });
+
+        // Email validation
+        document.getElementById('email').addEventListener('blur', function() {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(this.value)) {
+                this.style.borderColor = '#e74c3c';
+            } else {
+                this.style.borderColor = '#27ae60';
+            }
+        });
+
+        // Phone number formatting
+        document.getElementById('phone').addEventListener('input', function() {
+            let value = this.value.replace(/\D/g, '');
+            if (value.length >= 6) {
+                value = value.replace(/(\d{3})(\d{3})(\d{4})/, '($1) $2-$3');
+            } else if (value.length >= 3) {
+                value = value.replace(/(\d{3})(\d{0,3})/, '($1) $2');
+            }
+            this.value = value;
+        });
+
+        // Intersection Observer for animations (Enhanced)
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                    
+                    // Add stagger effect for cards in the same section
+                    const siblings = entry.target.parentElement.children;
+                    const index = Array.from(siblings).indexOf(entry.target);
+                    entry.target.style.transitionDelay = `${index * 0.1}s`;
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('.pain-card, .pricing-card, .credential-item, .faq-item').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 0.6s ease';
+            observer.observe(el);
+        });
+
+        // UPDATED: Performance optimization - Lazy load images when they exist
+        if ('IntersectionObserver' in window) {
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.src = img.dataset.src;
+                        img.classList.remove('lazy');
+                        observer.unobserve(img);
+                    }
+                });
+            });
+
+            document.querySelectorAll('img[data-src]').forEach(img => {
+                imageObserver.observe(img);
+            });
+        }
+
+        // Track page engagement for analytics
+        let maxScroll = 0;
+        window.addEventListener('scroll', function() {
+            const scrollPercent = Math.round((window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100);
+            if (scrollPercent > maxScroll) {
+                maxScroll = scrollPercent;
+                // Track scroll depth milestones
+                if (maxScroll >= 25 && !window.scrollTracked25) {
+                    console.log('Scroll depth: 25%');
+                    window.scrollTracked25 = true;
+                }
+                if (maxScroll >= 50 && !window.scrollTracked50) {
+                    console.log('Scroll depth: 50%');
+                    window.scrollTracked50 = true;
+                }
+                if (maxScroll >= 75 && !window.scrollTracked75) {
+                    console.log('Scroll depth: 75%');
+                    window.scrollTracked75 = true;
+                }
+            }
+        });
+
+        // Track time on page
+        const startTime = Date.now();
+        window.addEventListener('beforeunload', function() {
+            const timeOnPage = Math.round((Date.now() - startTime) / 1000);
+            console.log('Time on page:', timeOnPage, 'seconds');
+        });
+    </script>
+</body>
+</html>
+            
